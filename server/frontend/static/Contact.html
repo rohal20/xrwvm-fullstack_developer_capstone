@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Best Cars Dealership</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+    }
+    nav li {
+      margin-right: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a.active {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+    .contact-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #f9f9f9;
+    }
+    .contact-box img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .contact-box h2 {
+      margin-bottom: 20px;
+    }
+    .contact-box ul {
+      list-style: none;
+      padding: 0;
+    }
+    .contact-box li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/contact/" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-box">
+      <img src="/static/person.png" alt="Contact Icon">
+      <h2>Contact Customer Service</h2>
+      <ul>
+        <li>Email: support@bestcars.com</li>
+        <li>National Sales: NationalSales@bestcars.com</li>
+        <li>Public Relations: PR@bestcars.com</li>
+        <li>Phone: 312-611-1111</li>
+        <li>Visit us: 123 Car Lane, Detroit, MI, USA</li>
+        <li>Website: <a href="https://www.bestcars.com" target="_blank">www.bestcars.com</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

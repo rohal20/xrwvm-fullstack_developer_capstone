@@ -6,9 +6,40 @@
   <link rel="stylesheet" href="static/bootstrap.min.css">
 <script>
 
+
 const logout = async (e) => {
-//Include the code for logout here.
+  // Prevent default behavior if it's a link
+  if (e) e.preventDefault();
+
+  console.log("Logout clicked");
+
+  // Build logout URL and Make GET request to logout endpoint
+  const logout_url = window.location.origin + "/djangoapp/logout";
+
+  try {
+    const res = await fetch(logout_url, {
+      method: "GET",
+    });
+
+    const json = await res.json();
+    console.log("Logout response:", json);
+
+    if (json && json.userName === "") {
+      // Clear session storage and reload page
+      const username = sessionStorage.getItem("username");
+      sessionStorage.removeItem("username");
+
+      alert("Logging out " + username + "...");
+      window.location.href = window.location.origin;
+    } else {
+      alert("The user could not be logged out.");
+    }
+  } catch (err) {
+    console.error("Logout failed:", err);
+    alert("An error occurred while logging out.");
+  }
 };
+
 
 let checkSession = ()=>{
   let curr_user = sessionStorage.getItem("username");
